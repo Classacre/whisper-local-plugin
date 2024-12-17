@@ -2,9 +2,10 @@ import { spawn } from "child_process";
 import * as path from "path";
 
 interface TranscriptionOptions {
-	modelType: string;
+	modelType: "distil-large-v2" | "large-v3";
 	batchSize: number;
 	useFlashAttention: boolean;
+	language?: string;
 }
 
 interface TranscriptionResult {
@@ -71,6 +72,7 @@ export class PythonBridge {
 				model_type: options.modelType,
 				batch_size: options.batchSize,
 				use_flash_attention: options.useFlashAttention,
+				language: options.language,
 			};
 
 			python.stdin.write(JSON.stringify(inputData));

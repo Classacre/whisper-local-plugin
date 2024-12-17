@@ -1,2 +1,7 @@
+torch
+transformers>=4.36.0
+optimum
+accelerate
 insanely-fast-whisper
-torch --index-url https://download.pytorch.org/whl/cu121
+soundfile
+numpy 

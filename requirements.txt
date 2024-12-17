@@ -1,0 +1,5 @@
+insanely-fast-whisper>=0.0.15
+torch
+transformers
+optimum
+accelerate 

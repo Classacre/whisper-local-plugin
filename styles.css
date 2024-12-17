@@ -1,8 +1,50 @@
-/*
+/* Status indicators */
+.nav-action-button.is-disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.nav-action-button.is-recording {
+	color: var(--text-error);
+	animation: pulse 2s infinite;
+}
 
-If your plugin does not need CSS, delete this file.
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
-*/
+/* Status bar recording indicator */
+.status-bar-item .recording-dot {
+	color: var(--text-error);
+	margin-right: 4px;
+}
+
+.whisper-recording-indicator {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.whisper-recording-indicator.is-recording {
+	color: var(--color-red);
+}
+
+.whisper-recording-indicator .recording-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: currentColor;
+}
+
+.is-disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}

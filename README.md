@@ -1,3 +1,4 @@
+![image(14)](https://github.com/user-attachments/assets/c3ff0281-0d13-40b0-97ea-68786880bcfd)
 # Local Whisper Transcription Plugin for Obsidian
 
 A powerful speech-to-text plugin for Obsidian that uses OpenAI's Whisper model locally on your machine. Leveraging Insanely Fast Whisper optimizations, it provides fast and accurate transcription without sending your audio to the cloud.

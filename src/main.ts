@@ -36,7 +36,7 @@ export default class WhisperPlugin extends Plugin {
 	private recordingTimer: number;
 	private ribbonIcon: HTMLElement;
 
-	async onload() {
+	override async onload() {
 		// Set up temp directory
 		this.tempDir = path.join(os.tmpdir(), "obsidian-whisper");
 		await this.ensureTempDirectory();
@@ -146,7 +146,7 @@ export default class WhisperPlugin extends Plugin {
 		this.updateStatusBar("Ready");
 	}
 
-	async onunload() {
+	override async onunload() {
 		this.stopRecordingTimer();
 		if (this.recordingState.isRecording) {
 			await this.stopRecording();

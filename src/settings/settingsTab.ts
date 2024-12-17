@@ -1,6 +1,8 @@
 import { App, PluginSettingTab, Setting } from 'obsidian';
 import type { WhisperPlugin } from '../types/plugin';
 import { MODEL_OPTIONS, LANGUAGE_OPTIONS } from './settings';
+import { Notice } from 'obsidian';
+import { execAsync } from '../utils/execAsync';
 
 export class WhisperSettingTab extends PluginSettingTab {
     plugin: WhisperPlugin;
